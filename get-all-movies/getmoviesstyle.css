@@ -1,0 +1,167 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #d7d1d1;
+}
+
+.relative {
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem;
+  align-items: center;
+  background-color: aliceblue;
+  -webkit-box-shadow: 2px 3px 17px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 17px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 3px 17px -5px rgba(0, 0, 0, 0.75);
+}
+
+nav img {
+  width: 50px;
+}
+
+nav .linkbtn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+main .main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+main .movie-box {
+  width: 60%;
+  background-color: white;
+  margin: 1rem 0;
+  -webkit-box-shadow: 2px 3px 11px -1px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 2px 3px 11px -1px rgba(0, 0, 0, 0.83);
+  box-shadow: 2px 3px 11px -1px rgba(0, 0, 0, 0.83);
+}
+main .main-section .movie-box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+main .movie-box .content .gener {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+}
+
+main .movie-box .content .gener span {
+  margin: 10px;
+}
+.watch-btn button {
+  width: 400px;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(57, 55, 55);
+  background-color: rgb(10, 228, 75);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.watch-btn button:hover {
+  background-color: transparent;
+}
+.watch-btn {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.content .title {
+  font-size: 2rem;
+}
+.movie-box .content {
+  padding: 1rem;
+}
+
+.movie-box {
+  animation: fade;
+  animation-duration: 0.4s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.headingsection {
+  padding-top: 4rem;
+  text-align: center;
+  font-size: 4rem;
+}
+
+/* Optional: Add Font Awesome stylesheet */
+
+.movie-box .director,
+.movie-box .actors,
+.movie-box .rating,
+.movie-box .released {
+  margin: 5px 0;
+  color: grey;
+}
+.fa-heart {
+  color: red;
+  margin: 0 5px;
+}
+.fa-comment {
+  color: purple;
+  margin: 0 5px;
+}
+
+.description {
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 700px) {
+  .movie-box {
+    width: 90% !important;
+  }
+  .headingsection h2 {
+    font-size: 3rem;
+  }
+}
+
+footer {
+  padding: 10px;
+  background-color: rgb(26, 24, 24);
+
+  text-align: center;
+}
+
+footer a {
+  color: white;
+}

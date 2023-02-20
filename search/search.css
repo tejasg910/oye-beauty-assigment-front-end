@@ -1,0 +1,276 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.relative {
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem;
+  align-items: center;
+  background-color: aliceblue;
+  -webkit-box-shadow: 2px 3px 17px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 17px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 3px 17px -5px rgba(0, 0, 0, 0.75);
+}
+
+nav img {
+  width: 50px;
+}
+
+nav .linkbtn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+main {
+  padding-top: 4rem;
+}
+
+main .search-box {
+  width: 70vw;
+  margin: auto;
+}
+main .main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-box form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  background-color: transparent;
+  outline: none;
+}
+
+.search-box input[type="text"]::placeholder {
+  color: #999;
+}
+
+.search-box button[type="submit"] {
+  background-color: #1abc9c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.search-box button[type="submit"]:hover {
+  background-color: #148c7d;
+}
+
+main .main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+main .movie-box {
+  width: 60%;
+  background-color: rgb(243, 239, 234);
+  margin: 1rem 0;
+}
+
+main .movie-box .content .gener {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+}
+
+main .movie-box .content .gener span {
+  margin: 10px;
+}
+.watch-btn button {
+  width: 400px;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(57, 55, 55);
+  background-color: rgb(10, 228, 75);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.watch-btn button:hover {
+  background-color: transparent;
+}
+.watch-btn {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.content .title {
+  font-size: 4rem;
+}
+.movie-box .content {
+  padding: 1rem;
+}
+
+.movie-box {
+  animation: fade;
+  animation-duration: 0.4s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-link {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  color: #333;
+  text-decoration: none;
+}
+
+.page-link:hover {
+  background-color: #eee;
+}
+
+.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.search {
+  padding-top: 4rem;
+  position: relative;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 400px;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.search input[type="text"]:focus {
+  outline: none;
+  border-bottom-color: #007bff;
+}
+
+.search button {
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.search button:hover {
+  background-color: #0056b3;
+}
+
+.search i {
+  font-size: 16px;
+}
+
+/* Optional: Add Font Awesome stylesheet */
+.headingsection {
+  padding-top: 4rem;
+  text-align: center;
+  font-size: 4rem;
+}
+
+/* Optional: Add Font Awesome stylesheet */
+
+.movie-box .director,
+.movie-box .actors,
+.movie-box .rating,
+.movie-box .released {
+  margin: 5px 0;
+  color: grey;
+}
+.fa-heart {
+  color: red;
+  margin: 0 5px;
+}
+.fa-comment {
+  color: purple;
+  margin: 0 5px;
+}
+
+.description {
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 700px) {
+  .movie-box {
+    width: 90% !important;
+  }
+  .headingsection h2 {
+    font-size: 3rem;
+  }
+}
