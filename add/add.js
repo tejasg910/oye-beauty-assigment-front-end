@@ -18,7 +18,7 @@ const addMovie = async () => {
     director: document.getElementById("director").value,
     released: document.getElementById("released").value,
   };
-  console.log(title);
+
   const res = await fetch("http://localhost:5000/api/add-movie", {
     method: "POST",
     body: JSON.stringify(data),
@@ -28,7 +28,6 @@ const addMovie = async () => {
   });
 
   const response = await res.json();
-  console.log(response);
 };
 
 form.addEventListener("submit", (event) => {

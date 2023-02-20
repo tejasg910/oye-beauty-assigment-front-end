@@ -5,7 +5,6 @@ window.onload = function () {
   getPagination(10, 1);
 };
 async function getPagination(size = 10, page = 1) {
-  console.log(page, size);
   const data = await fetch(
     `http://localhost:5000/api/get-paginated?page=${page}&size=${size}`
   );
@@ -14,7 +13,6 @@ async function getPagination(size = 10, page = 1) {
 
   const arr = res.data;
 
-  console.log(arr);
   const mainSection = document.getElementById("mainsection");
 
   mainSection.innerHTML = "";
@@ -79,7 +77,6 @@ pageLinks.forEach((link) => {
     const page = this.dataset.page;
 
     // Do something with the page number, such as fetching new data from the server
-    console.log(`Loading page ${page}...`);
 
     getPagination(10, page);
   });

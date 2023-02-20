@@ -47,7 +47,7 @@ async function getData() {
                 </div>
             </div>`;
   } else {
-    console.log("something went wrong ");
+    mainSection.innerHTML = "<h3>Something went wrong</h3>";
   }
 }
 
